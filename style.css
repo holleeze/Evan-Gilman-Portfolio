@@ -20,7 +20,7 @@
   --gradient-mid: #0a1a0a;
   --gradient-end: #081008;
   
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'Red Rose', serif;
   --font-body: 'Instrument Sans', sans-serif;
   
   --spacing-xs: 0.5rem;
@@ -181,7 +181,7 @@ main {
 /* ===========================================
    HERO SECTION
    =========================================== */
-   .hero {
+.hero {
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -209,7 +209,7 @@ main {
 }
 
 .hero-title {
-  font-family: font-family: "Red Rose", serif;;
+  font-family: var(--font-display);
   font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 800;
   line-height: 1.1;
@@ -306,6 +306,14 @@ main {
 
 .featured-embed .video-container {
   border-radius: 0;
+}
+
+.featured-embed.vertical iframe {
+  width: 300px;
+  height: 533px;
+  max-width: 100%;
+  border: none;
+  border-radius: 8px;
 }
 
 /* Social embed styling */
@@ -554,6 +562,7 @@ main {
   border-radius: 12px;
   aspect-ratio: 1;
   object-fit: cover;
+  margin-top: 75px;
 }
 
 .bio-content h1 {
@@ -777,6 +786,14 @@ main {
   margin-top: var(--spacing-xs);
   font-size: 0.9rem;
   color: var(--color-accent);
+}
+.video-container.vertical {
+  padding-bottom: 177.78%; /* 9:16 aspect ratio */
+  max-width: 350px; /* so it doesn't get huge on desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-elevated);
 }
 
 /* ===========================================
