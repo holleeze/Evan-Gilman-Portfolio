@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content | Evan Gilman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Evan Gilman</a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="content.html" class="active">All Content</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="content-page">
+    <header class="page-header">
+      <h1>All Content</h1>
+      <p>Video production, social content, and brand work for Team Liquid and partners.</p>
+    </header>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="talent">Talent Content</button>
+      <button class="filter-btn" data-filter="brand">Brand & Promo</button>
+      <button class="filter-btn" data-filter="docu">Docuseries</button>
+    </div>
+
+    <!-- Content Grid -->
+    <section class="content-grid">
+      
+      <!-- Talent Content Items -->
+      <article class="content-item" data-category="talent">
+        <div class="content-embed">
+          <!-- TikTok embed -->
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@liquid/video/VIDEOID" data-video-id="VIDEOID">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">Talent Interview</span>
+          <h3>X-Men Street Interview</h3>
+          <p>Team Liquid · 2.1M views</p>
+        </div>
+      </article>
+
+      <article class="content-item" data-category="talent">
+        <div class="content-embed">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@liquid/video/VIDEOID" data-video-id="VIDEOID">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">Talent Interview</span>
+          <h3>Nihachu Q&A Part 1</h3>
+          <p>Team Liquid · 850K views</p>
+        </div>
+      </article>
+
+      <article class="content-item" data-category="talent">
+        <div class="content-embed">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@liquid/video/VIDEOID" data-video-id="VIDEOID">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">Talent Interview</span>
+          <h3>Nihachu Q&A Part 2</h3>
+          <p>Team Liquid · 620K views</p>
+        </div>
+      </article>
+
+      <article class="content-item" data-category="talent">
+        <div class="content-embed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/REELID/" data-instgrm-version="14">
+          </blockquote>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">Talent Content</span>
+          <h3>Mini Mics: WoW Edition</h3>
+          <p>Team Liquid × Alienware</p>
+        </div>
+      </article>
+
+      <!-- Brand Content Items -->
+      <article class="content-item" data-category="brand">
+        <div class="content-embed">
+          <blockquote class="twitter-tweet" data-theme="dark">
+            <a href="https://twitter.com/TeamLiquid/status/TWEETID"></a>
+          </blockquote>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">Brand Campaign</span>
+          <h3>Blue Plush Launch</h3>
+          <p>Team Liquid · Viral Campaign</p>
+        </div>
+      </article>
+
+      <article class="content-item" data-category="brand">
+        <div class="content-embed">
+          <blockquote class="twitter-tweet" data-theme="dark">
+            <a href="https://twitter.com/TeamLiquid/status/TWEETID"></a>
+          </blockquote>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">Brand Campaign</span>
+          <h3>Magic Johnson Feature</h3>
+          <p>Team Liquid · 2025</p>
+        </div>
+      </article>
+
+      <article class="content-item" data-category="brand">
+        <div class="content-embed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/REELID/" data-instgrm-version="14">
+          </blockquote>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">Sponsor Content</span>
+          <h3>Alienware Product Launch</h3>
+          <p>Alienware · Social Campaign</p>
+        </div>
+      </article>
+
+      <!-- Docuseries Items -->
+      <article class="content-item large" data-category="docu">
+        <div class="content-embed">
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/VIDEO_ID" 
+              title="SQUAD Episode"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">Docuseries</span>
+          <h3>SQUAD: Off The Rift - Episode 1</h3>
+          <p>Team Liquid × Alienware · Producer</p>
+        </div>
+      </article>
+
+      <article class="content-item large" data-category="docu">
+        <div class="content-embed">
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/VIDEO_ID" 
+              title="SQUAD Episode"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">Docuseries</span>
+          <h3>SQUAD: Off The Rift - Episode 2</h3>
+          <p>Team Liquid × Alienware · Producer</p>
+        </div>
+      </article>
+
+      <article class="content-item" data-category="brand">
+        <div class="content-embed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/REELID/" data-instgrm-version="14">
+          </blockquote>
+        </div>
+        <div class="content-info">
+          <span class="content-tag">LCS Content</span>
+          <h3>LCS Team Entrances</h3>
+          <p>Team Liquid · Fan Favorite</p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Evan Gilman</p>
+    <a href="mailto:evan@email.com">evan@email.com</a>
+  </footer>
+
+  <!-- Social Embed Scripts -->
+  <script async src="https://www.tiktok.com/embed.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="script.js"></script>
+</body>
+</html>

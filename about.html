@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Evan Gilman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Evan Gilman</a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="content.html">All Content</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="about-page">
+    <!-- Bio Section -->
+    <section class="bio-section">
+      <div class="bio-image">
+        <!-- Replace with Evan's headshot -->
+        <img src="images/evan-headshot.jpg" alt="Evan Gilman">
+      </div>
+      <div class="bio-content">
+        <h1>Hey, I'm Evan.</h1>
+        <p class="bio-lead">I'm a video producer and content creator with a passion for gaming, esports, and making people smile.</p>
+        <p>Currently at <strong>Team Liquid</strong>, I produce social content, talent interviews, brand campaigns, and documentary-style series. I've worked on everything from viral TikToks to the SQUAD docuseries presented by Alienware.</p>
+        <p>What drives me is the challenge of capturing authentic moments and turning them into content that resonates. Whether it's a street interview that hits 2 million views or an intimate behind-the-scenes look at pro players, I'm always chasing that next idea that'll grab people's attention.</p>
+        <p>When I'm not behind a camera, I'm probably gaming, watching esports, or thinking about the next shoot.</p>
+        
+        <div class="bio-cta">
+          <a href="contact.html" class="btn-primary">Get in Touch</a>
+          <a href="images/evan-gilman-resume.pdf" class="btn-secondary" target="_blank">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BTS Carousel -->
+    <section class="bts-section">
+      <h2 class="section-title">Behind the Scenes</h2>
+      
+      <div class="swiper bts-carousel">
+        <div class="swiper-wrapper">
+          <!-- Add your BTS photos here -->
+          <div class="swiper-slide">
+            <img src="images/bts-01.jpg" alt="On set at Team Liquid facility">
+            <p class="bts-caption">Team Liquid HQ</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/bts-02.jpg" alt="Filming talent interview">
+            <p class="bts-caption">Talent Interviews</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/bts-03.jpg" alt="Behind the camera at LCS">
+            <p class="bts-caption">LCS Production</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/bts-04.jpg" alt="Production setup">
+            <p class="bts-caption">On Location</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/bts-05.jpg" alt="With the team">
+            <p class="bts-caption">The Team</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/bts-06.jpg" alt="Editing bay">
+            <p class="bts-caption">Post-Production</p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!-- Previous Work / Casting Credits -->
+    <section class="previous-section">
+      <h2 class="section-title">Previously</h2>
+      <p class="previous-intro">Before esports, I spent years as a Casting Producer in unscripted television, conducting hundreds of interviews and managing casting teams for major network shows.</p>
+      
+      <div class="credits-grid">
+        <div class="credit-item">
+          <img src="images/shows/wipeout.jpg" alt="Wipeout">
+          <span>Wipeout</span>
+          <small>TBS</small>
+        </div>
+        <div class="credit-item">
+          <img src="images/shows/holey-moley.jpg" alt="Holey Moley">
+          <span>Holey Moley</span>
+          <small>ABC · Seasons 1-4</small>
+        </div>
+        <div class="credit-item">
+          <img src="images/shows/name-that-tune.jpg" alt="Name That Tune">
+          <span>Name That Tune</span>
+          <small>Fox</small>
+        </div>
+        <div class="credit-item">
+          <img src="images/shows/double-dare.jpg" alt="Double Dare">
+          <span>Double Dare</span>
+          <small>Nickelodeon</small>
+        </div>
+        <div class="credit-item">
+          <img src="images/shows/gong-show.jpg" alt="The Gong Show">
+          <span>The Gong Show</span>
+          <small>ABC</small>
+        </div>
+        <div class="credit-item">
+          <img src="images/shows/karma.jpg" alt="Karma">
+          <span>Karma</span>
+          <small>HBO Max</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Evan Gilman</p>
+    <a href="mailto:evan@email.com">evan@email.com</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
