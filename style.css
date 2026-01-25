@@ -385,8 +385,9 @@ main {
 }
 
 .clients-logos img {
-  height: 30px;
-  width: auto;
+  width: 100px;
+  height: 40px;
+  object-fit: contain;
   opacity: 0.5;
   filter: grayscale(100%);
   transition: var(--transition);
