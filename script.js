@@ -136,3 +136,33 @@ if (document.readyState === 'complete') {
 } else {
   window.addEventListener('load', observeEmbeds);
 }
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox?.querySelector('img');
+const lightboxClose = lightbox?.querySelector('.lightbox-close');
+const photoGrid = document.querySelector('.photo-grid');
+
+if (photoGrid && lightbox) {
+  photoGrid.addEventListener('click', (e) => {
+    if (e.target.tagName === 'IMG') {
+      lightboxImg.src = e.target.src;
+      lightboxImg.alt = e.target.alt;
+      lightbox.classList.add('active');
+    }
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+
+  lightboxClose.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      lightbox.classList.remove('active');
+    }
+  });
+}

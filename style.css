@@ -224,7 +224,8 @@ main {
 .hero-subtitle {
   font-size: 1.25rem;
   color: var(--color-text-muted);
-  max-width: 500px;
+  max-width: 1000px;
+  text-wrap: balance;
 }
 
 .reel-wrapper {
@@ -453,7 +454,7 @@ main {
 .page-header p {
   color: var(--color-text-muted);
   font-size: 1.1rem;
-  max-width: 600px;
+  max-width: 1000px;
 }
 
 /* Filter Tabs */
@@ -856,5 +857,41 @@ main {
     flex-direction: column;
     gap: var(--spacing-xs);
     text-align: center;
+  }
+}
+/* Photography page css */ 
+.photography-page {
+  padding: var(--spacing-lg) var(--spacing-md);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.photo-grid {
+  columns: 3;
+  column-gap: var(--spacing-sm);
+}
+
+.photo-grid img {
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+  border-radius: 8px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  break-inside: avoid;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(34, 197, 94, 0.2);
+}
+
+@media (max-width: 900px) {
+  .photo-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .photo-grid {
+    columns: 1;
   }
 }
