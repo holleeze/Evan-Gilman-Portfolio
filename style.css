@@ -139,7 +139,7 @@ a {
   
   .nav-links {
     position: fixed;
-    top: 60px;
+    top: 0px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -147,10 +147,11 @@ a {
     align-items: center;
     justify-content: center;
     gap: var(--spacing-lg);
-    background: var(--color-bg);
+    background: #080c08 !important;
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+    z-index: 999;
   }
   
   .nav-links.active {
