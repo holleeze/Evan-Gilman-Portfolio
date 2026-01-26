@@ -441,7 +441,9 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
 }
-
+.content-embed .video-container {
+  width: 100%;
+}
 .page-header {
   margin-bottom: var(--spacing-lg);
 }
