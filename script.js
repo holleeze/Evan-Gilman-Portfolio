@@ -23,7 +23,7 @@ if (navToggle) {
 
 // Content Filter Functionality
 const filterBtns = document.querySelectorAll('.filter-btn');
-const contentItems = document.querySelectorAll('.content-item');
+const contentSections = document.querySelectorAll('.content-section');
 
 if (filterBtns.length > 0) {
   filterBtns.forEach(btn => {
@@ -34,16 +34,12 @@ if (filterBtns.length > 0) {
       
       const filter = btn.dataset.filter;
       
-      // Filter items
-      contentItems.forEach(item => {
-        if (filter === 'all' || item.dataset.category === filter) {
-          item.classList.remove('hidden');
-          // Re-trigger animations if needed
-          item.style.animation = 'none';
-          item.offsetHeight; // Trigger reflow
-          item.style.animation = '';
+      // Filter sections
+      contentSections.forEach(section => {
+        if (filter === 'all' || section.dataset.category === filter) {
+          section.classList.remove('hidden');
         } else {
-          item.classList.add('hidden');
+          section.classList.add('hidden');
         }
       });
 
