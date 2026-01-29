@@ -164,11 +164,6 @@ if (photoGrid && lightbox) {
   });
 }
 window.addEventListener('load', function() {
-  if (window.twttr && twttr.widgets) {
-    twttr.widgets.load();
-  }
-});
-window.addEventListener('load', function() {
   // Reload Twitter embeds
   if (window.twttr && twttr.widgets) {
     twttr.widgets.load();
@@ -178,9 +173,13 @@ window.addEventListener('load', function() {
   if (window.tiktokEmbed && tiktokEmbed.lib) {
     tiktokEmbed.lib.render();
   } else {
-    // Force reload TikTok script
     const script = document.createElement('script');
     script.src = 'https://www.tiktok.com/embed.js';
     document.body.appendChild(script);
+  }
+  
+  // Reload Instagram embeds
+  if (window.instgrm && instgrm.Embeds) {
+    instgrm.Embeds.process();
   }
 });

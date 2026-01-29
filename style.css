@@ -318,9 +318,7 @@ main {
   height: 100%;
   padding-bottom: 0;
  }
-.featured-embed.vertical {
- 
-}
+
 .featured-embed.vertical,
 .featured-embed.instagram {
  height: 600px;
@@ -556,8 +554,13 @@ main {
 
 
 /* TikTok - needs special handling because it injects its own size */
+.content-item.vertical-card:has(.tiktok-embed) {
+  max-width: 290px;
+}
+
 .content-item.vertical-card:has(.tiktok-embed) .content-embed {
-  height: 580px;
+  height: 500px; /* or 580px, whichever looks better */
+  position: relative;
 }
 
 .content-item.vertical-card .tiktok-embed {
@@ -565,28 +568,18 @@ main {
   max-width: 120% !important;
   min-width: 120% !important;
   position: absolute;
-  top: -10px; /* crop more from the top */
+  top: -10px;
   left: 50%;
   transform: translateX(-50%) scale(0.899);
   transform-origin: top center;
 }
+
 /* Instagram Reels */
 .content-item.vertical-card .instagram-media {
   margin: 0 !important;
   max-width: 100% !important;
   min-width: 100% !important;
 }
- 
-/* TikTok - wider card and crop more from top */
-.content-item.vertical-card:has(.tiktok-embed) {
-  max-width: 290px;
-}
-
-.content-item.vertical-card:has(.tiktok-embed) .content-embed {
-  height: 500px;
-  position: relative;
-}
-
 
 
 
