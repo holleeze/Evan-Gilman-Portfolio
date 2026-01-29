@@ -169,8 +169,18 @@ window.addEventListener('load', function() {
   }
 });
 window.addEventListener('load', function() {
+  // Reload Twitter embeds
+  if (window.twttr && twttr.widgets) {
+    twttr.widgets.load();
+  }
+  
   // Reload TikTok embeds
-  if (window.tiktokEmbed) {
-    window.tiktokEmbed.lib.render();
+  if (window.tiktokEmbed && tiktokEmbed.lib) {
+    tiktokEmbed.lib.render();
+  } else {
+    // Force reload TikTok script
+    const script = document.createElement('script');
+    script.src = 'https://www.tiktok.com/embed.js';
+    document.body.appendChild(script);
   }
 });
