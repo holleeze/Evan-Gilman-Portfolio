@@ -168,3 +168,9 @@ window.addEventListener('load', function() {
     twttr.widgets.load();
   }
 });
+window.addEventListener('load', function() {
+  // Reload TikTok embeds
+  if (window.tiktokEmbed) {
+    window.tiktokEmbed.lib.render();
+  }
+});
