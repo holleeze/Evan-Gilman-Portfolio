@@ -163,3 +163,8 @@ if (photoGrid && lightbox) {
     }
   });
 }
+window.addEventListener('load', function() {
+  if (window.twttr && twttr.widgets) {
+    twttr.widgets.load();
+  }
+});
