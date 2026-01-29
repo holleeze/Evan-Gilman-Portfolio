@@ -589,10 +589,12 @@ main {
 }
 
 
-
-
 @media (max-width: 1000px) {
   .content-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .content-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -601,17 +603,16 @@ main {
   .content-section {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 1000px) {
-  .content-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
+  
   .content-grid {
     grid-template-columns: 1fr;
+  }
+  
+  /* Center and widen vertical cards on mobile */
+  .content-item.vertical-card {
+    max-width: 85%;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
