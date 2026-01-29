@@ -460,6 +460,13 @@ main {
   max-width: 1000px;
 }
 
+.content-role {
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* Filter Tabs */
 .filter-tabs {
   display: flex;
