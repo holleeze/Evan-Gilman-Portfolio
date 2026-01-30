@@ -1103,3 +1103,27 @@ main {
   border-radius: 4px;
   max-width: 80%;
 }
+.credit-link {
+  color: var(--color-text-dim);
+  font-size: 0.75rem;
+  transition: color var(--transition);
+}
+
+.credit-link:hover {
+  color: var(--color-accent);
+}
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.credit-link {
+  color: var(--color-text-dim);
+  font-size: 0.7rem;
+  transition: color var(--transition);
+}
+
+.credit-link:hover {
+  color: var(--color-accent);}
