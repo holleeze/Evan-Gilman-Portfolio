@@ -761,9 +761,52 @@
   <a href="mailto:egilman89@gmail.com">egilman89@gmail.com</a>
 </footer>
   <!-- Social Embed Scripts -->
-  <script async src="https://www.tiktok.com/embed.js"></script>
-  <script async src="https://www.instagram.com/embed.js"></script>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ <script>
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile) {
+      ["https://www.tiktok.com/embed.js",
+       "https://www.instagram.com/embed.js",
+       "https://platform.twitter.com/widgets.js"].forEach(src => {
+        const s = document.createElement("script");
+        s.src = src; s.async = true;
+        document.body.appendChild(s);
+      });
+    } else {
+      const loaded = new Set();
+
+      const scriptMap = {
+        'instagram-media': 'https://www.instagram.com/embed.js',
+        'tiktok-embed':    'https://www.tiktok.com/embed.js',
+        'twitter-tweet':   'https://platform.twitter.com/widgets.js'
+      };
+
+      const loadScript = (src) => {
+        if (loaded.has(src)) return;
+        loaded.add(src);
+        const s = document.createElement("script");
+        s.src = src; s.async = true;
+        document.body.appendChild(s);
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          for (const [cls, src] of Object.entries(scriptMap)) {
+            if (el.classList.contains(cls)) {
+              loadScript(src);
+              observer.unobserve(el);
+              break;
+            }
+          }
+        });
+      }, { rootMargin: '200px' });
+
+      document.querySelectorAll('.instagram-media, .tiktok-embed, .twitter-tweet')
+        .forEach(el => observer.observe(el));
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
