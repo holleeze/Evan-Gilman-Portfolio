@@ -263,7 +263,16 @@ main {
   height: 100%;
   border: none;
 }
+.glow-link {
+  color: #86f186;
+  text-decoration: none;
+  font-weight: 400;
+  transition: text-shadow 0.2s ease;
+}
 
+.glow-link:hover {
+  text-shadow: 0 0 8px rgba(255, 242, 128, 0.4);
+}
 /* ===========================================
    FEATURED SECTION
    =========================================== */
