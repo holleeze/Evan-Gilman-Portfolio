@@ -231,6 +231,13 @@ main {
   text-wrap: balance;
 }
 
+.hero-subtitle2 {
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  max-width: 1000px;
+  text-wrap: balance;
+}
+
 .reel-wrapper {
   width: 100%;
   max-width: 900px;
