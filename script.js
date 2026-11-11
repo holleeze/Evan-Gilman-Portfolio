@@ -169,15 +169,6 @@ window.addEventListener('load', function() {
     twttr.widgets.load();
   }
   
-  // Reload TikTok embeds
-  if (window.tiktokEmbed && tiktokEmbed.lib) {
-    tiktokEmbed.lib.render();
-  } else {
-    const script = document.createElement('script');
-    script.src = 'https://www.tiktok.com/embed.js';
-    document.body.appendChild(script);
-  }
-  
   // Reload Instagram embeds
   if (window.instgrm && instgrm.Embeds) {
     instgrm.Embeds.process();

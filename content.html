@@ -805,11 +805,16 @@
 </footer>
   <!-- Social Embed Scripts -->
  <script>
+    // Load TikTok once on all screen sizes, including when its section is offscreen.
+    const tikTokScript = document.createElement('script');
+    tikTokScript.src = 'https://www.tiktok.com/embed.js';
+    tikTokScript.async = true;
+    document.body.appendChild(tikTokScript);
+
     const isMobile = window.innerWidth <= 768;
 
     if (!isMobile) {
-      ["https://www.tiktok.com/embed.js",
-       "https://www.instagram.com/embed.js",
+      ["https://www.instagram.com/embed.js",
        "https://platform.twitter.com/widgets.js"].forEach(src => {
         const s = document.createElement("script");
         s.src = src; s.async = true;
@@ -820,7 +825,6 @@
 
       const scriptMap = {
         'instagram-media': 'https://www.instagram.com/embed.js',
-        'tiktok-embed':    'https://www.tiktok.com/embed.js',
         'twitter-tweet':   'https://platform.twitter.com/widgets.js'
       };
 
